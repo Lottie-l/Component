@@ -10,7 +10,7 @@ describe('Form', () => {
 
   it('no Style on Form', () => {
     // 应该form和item都没样式
-    const onChange = jest.fn();
+    const onChange = vi.fn();
 
     const { container } = render(
       <Form noStyle={true}>
@@ -29,26 +29,26 @@ describe('Form', () => {
 
   it('no Style on Form.Item', () => {
     // 应该form和item都没样式
-    const onChange = jest.fn();
+    const onChange = vi.fn();
 
     const { container } = render(
       <Form>
         <Form.Item
           name="test"
-          noStyle={true}
           initialValue="bamboo"
           rules={[{ required: true }]}
+          noStyle={true}
         >
           <Input onChange={onChange} />
         </Form.Item>
       </Form>,
     );
     expect(container.querySelectorAll('.ci-form-item').length).toBe(0);
-    expect(container.querySelectorAll('.ci-form').length > 0).toBeTruthy();
+    expect(container.querySelectorAll('.ci-form').length).toBe(1);
   });
 
   it('show require icon when required is true or rules contain required', () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const { container, rerender } = render(
       <Form>
         <Form.Item
@@ -77,7 +77,7 @@ describe('Form', () => {
   });
 
   it('show different size', () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const { container, rerender } = render(
       <Form size="small">
         <Form.Item

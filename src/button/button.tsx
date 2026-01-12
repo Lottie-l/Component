@@ -48,25 +48,31 @@ type AnchorButtonProps = {
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
 const Button: FC<ButtonProps> = ({
-  type,
-  htmlType,
-  size,
-  disabled,
-  block,
+  type = 'default',
+  htmlType = 'button' as ButtonProps['htmlType'],
+  size = 'md',
+  disabled = false,
+  block = false,
   className,
   href,
   children,
   ...restProps
 }) => {
-  const classes = classNames('l-btn', className, {
-    [`l-btn-${type}`]: type,
-    [`l-btn-${size}`]: size,
-    'l-btn-block': block,
+  const classes = classNames('ci-btn', className, {
+    [`ci-btn-${type}`]: type,
+    [`ci-btn-${size}`]: size,
+    'ci-btn-block': block,
   });
+
+  // 处理test-id属性，转换为data-testid以便Testing Library使用
+  const commonProps = {
+    ...restProps,
+    'data-testid': restProps['test-id'] || restProps['data-testid'],
+  };
 
   if (type === 'link' && href) {
     return (
-      <a className={classes} href={href} {...restProps}>
+      <a className={classes} href={href} {...commonProps}>
         {children}
       </a>
     );
@@ -79,19 +85,11 @@ const Button: FC<ButtonProps> = ({
       type={htmlType ?? 'submit'}
       className={classes}
       disabled={disabled}
-      {...restProps}
+      {...commonProps}
     >
       {kids}
     </button>
   );
-};
-
-Button.defaultProps = {
-  disabled: false,
-  type: 'default',
-  size: 'md',
-  block: false,
-  htmlType: 'button' as ButtonProps['htmlType'],
 };
 
 export default Button;

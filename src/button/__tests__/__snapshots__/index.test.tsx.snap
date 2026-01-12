@@ -1,11 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Button should render correctly 1`] = `
+exports[`Button > should render correctly 1`] = `
 <div
   data-testid="button"
 >
   <button
-    class="l-btn l-btn-default l-btn-md"
+    class="ci-btn ci-btn-default ci-btn-md"
     type="button"
   >
     <span>
@@ -13,7 +13,7 @@ exports[`Button should render correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-primary l-btn-md"
+    class="ci-btn ci-btn-primary ci-btn-md"
     type="button"
   >
     <span>
@@ -21,7 +21,7 @@ exports[`Button should render correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-info l-btn-md"
+    class="ci-btn ci-btn-info ci-btn-md"
     type="button"
   >
     <span>
@@ -29,7 +29,7 @@ exports[`Button should render correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-warning l-btn-md"
+    class="ci-btn ci-btn-warning ci-btn-md"
     type="button"
   >
     <span>
@@ -37,7 +37,7 @@ exports[`Button should render correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-danger l-btn-md"
+    class="ci-btn ci-btn-danger ci-btn-md"
     type="button"
   >
     <span>
@@ -45,7 +45,7 @@ exports[`Button should render correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-dashed l-btn-md"
+    class="ci-btn ci-btn-dashed ci-btn-md"
     type="button"
   >
     <span>
@@ -53,7 +53,7 @@ exports[`Button should render correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-text l-btn-md"
+    class="ci-btn ci-btn-text ci-btn-md"
     type="button"
   >
     <span>
@@ -63,12 +63,12 @@ exports[`Button should render correctly 1`] = `
 </div>
 `;
 
-exports[`Button should render different sizes correctly 1`] = `
+exports[`Button > should render different sizes correctly 1`] = `
 <div
   data-testid="button_size"
 >
   <button
-    class="l-btn l-btn-primary l-btn-lg"
+    class="ci-btn ci-btn-primary ci-btn-lg"
     type="button"
   >
     <span>
@@ -76,7 +76,7 @@ exports[`Button should render different sizes correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-primary l-btn-md"
+    class="ci-btn ci-btn-primary ci-btn-md"
     type="button"
   >
     <span>
@@ -84,7 +84,7 @@ exports[`Button should render different sizes correctly 1`] = `
     </span>
   </button>
   <button
-    class="l-btn l-btn-primary l-btn-sm"
+    class="ci-btn ci-btn-primary ci-btn-sm"
     type="button"
   >
     <span>

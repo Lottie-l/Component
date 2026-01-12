@@ -1,6 +1,6 @@
 @import './mixins.less';
 
-.l-btn {
+.ci-btn {
   position: relative;
   display: inline-block;
   color: @body-color;
@@ -28,39 +28,39 @@
   }
 }
 // type
-.l-btn-default {
+.ci-btn-default {
   .button-style(@white, @gray-400, @body-color, @white, @primary, @primary);
 }
 
-.l-btn-primary {
+.ci-btn-primary {
   .button-style(@primary, @primary, @white);
 }
 
-.l-btn-info {
+.ci-btn-info {
   .button-style(@info, @info, @white);
 }
 
-.l-btn-warning {
+.ci-btn-warning {
   .button-style(@warning, @warning, @white);
 }
 
-.l-btn-danger {
+.ci-btn-danger {
   .button-style(@danger, @danger, @white);
 }
 
-.l-btn-text {
+.ci-btn-text {
   .button-style(transparent, transparent, @body-color);
 
   box-shadow: none;
 }
 
-.l-btn-dashed {
+.ci-btn-dashed {
   .button-style(@white, @gray-400, @body-color, @white, @primary, @primary);
 
   border-style: dotted;
 }
 
-.l-btn-link {
+.ci-btn-link {
   color: @btn-link-color;
   font-weight: @font-weight-base;
   text-decoration: none;
@@ -86,7 +86,7 @@
 }
 
 // size
-.l-btn-lg {
+.ci-btn-lg {
   .button-size(
     @btn-padding-y-lg,
     @btn-padding-x-lg,
@@ -95,7 +95,7 @@
   );
 }
 
-.l-btn-md {
+.ci-btn-md {
   .button-size(
     @btn-padding-y-md,
     @btn-padding-x-md,
@@ -104,7 +104,7 @@
   );
 }
 
-.l-btn-sm {
+.ci-btn-sm {
   .button-size(
     @btn-padding-y-sm,
     @btn-padding-x-sm,
@@ -114,7 +114,7 @@
 }
 
 // shape
-.l-btn-circle {
+.ci-btn-circle {
   min-width: 32px;
   padding-right: 0;
   padding-left: 0;
@@ -122,11 +122,11 @@
   border-radius: 50%;
 }
 
-.l-btn-round {
+.ci-btn-round {
   border-radius: 30%;
 }
 
 // block
-.l-btn-block {
+.ci-btn-block {
   width: 100%;
 }

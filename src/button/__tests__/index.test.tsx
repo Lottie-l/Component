@@ -22,7 +22,7 @@ describe('Button', () => {
   });
 
   it('should call onClick when clicked', () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     const { getByTestId } = render(
       <Button data-testid="button" onClick={onClick} />,
     );
@@ -34,14 +34,14 @@ describe('Button', () => {
 
   it('should render a link tag when type equals link and href is provided', () => {
     const { getByTestId } = render(
-      <Button data-testid="button" type="link" href="https://www.baidu.com">
+      <Button test-id="button" type="link" href="https://example.com">
         Link
       </Button>,
     );
     const element = getByTestId('button');
     expect(element.tagName).toEqual('A');
-    expect(element.classList.contains('l-btn')).toBe(true);
-    expect(element.classList.contains('l-btn-link')).toBe(true);
+    expect(element.classList.contains('ci-btn')).toBe(true);
+    expect(element.classList.contains('ci-btn-link')).toBe(true);
   });
 
   it('should render different sizes correctly', () => {
@@ -63,7 +63,7 @@ describe('Button', () => {
   });
 
   it('should render disabled button correctly', () => {
-    const fn = jest.fn();
+    const fn = vi.fn();
     const { getByTestId } = render(
       <Button disabled onClick={fn} data-testid="button_disabled">
         disabled

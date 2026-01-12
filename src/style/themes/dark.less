@@ -1,0 +1,33 @@
+
+@dark-primary: #177ddc;
+@dark-success: #49aa19;
+@dark-warning: #d89614;
+@dark-error: #a61d24;
+@dark-info: #1668dc;
+
+@dark-component-background: #141414;
+@dark-component-border-color: #434343;
+@dark-component-hover-border-color: #595959;
+
+
+[data-theme='dark'] {
+  --primary-color: @dark-primary;
+  --success-color: @dark-success;
+  --warning-color: @dark-warning;
+  --error-color: @dark-error;
+  --info-color: @dark-info;
+  --component-bg: @dark-component-background;
+  --component-border: @dark-component-border-color;
+}
+
+
+.theme-dark {
+  @primary: @dark-primary;
+  @success: @dark-success;
+  @warning: @dark-warning;
+  @error: @dark-error;
+  @info: @dark-info;
+  @component-background: @dark-component-background;
+  @component-border-color: @dark-component-border-color;
+  @component-hover-border-color: @dark-component-hover-border-color;
+}
